@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# The previous line is required on Linux systems to find the Python interpreter
+#
+# Newton-Rhapson Minimizer: Harmonic Potential
+# Alexandria Taylor, 4/26/2020
+# Potential Function Parameters
+k = 1850.0 # Harmonic force constant in J/m2
+r_eq = 1.1283 # Equilibrium distance
+# Initial Search Point
+r_ini = 1.40
+# Newton-Rhapson Minimizer Search
+r = r_ini
+step = 0.0001
+F = k * (r - r_eq) # Force (first derivative)
+H = k
+print ("Newton Rhapson Minimizer Disctance")
+print ("0", r, H, F) # Initial values
+for i in range(1,60): # Iterate up to 60 times
+r = r - (F/H)
+F = k * (r - r_eq)
+H = k
+print (i, r, H, F)
+if (abs(F) < 0.01): # Are we at the stationary point already?
+Break
+Python output
+Newton Rhapson Minimizer Disctance
+0 1.4 1850.0 502.6449999999997
+1 1.1283 1850.0 0.0
+This is the result of applying the Newton Rhapson Minimizer, which shows a significant difference in the number of calculations require to obtain the minimum distance. Compared to the Steepest Descent approach, results below.
+Step Distance Energy Force
+53 1.128305314261263 2.6123269811827434e-08 0.00983138333622291
