@@ -26,6 +26,6 @@ Python output
 Newton Rhapson Minimizer Disctance
 0 1.4 1850.0 502.6449999999997
 1 1.1283 1850.0 0.0
-This is the result of applying the Newton Rhapson Minimizer, which shows a significant difference in the number of calculations require to obtain the minimum distance. Compared to the Steepest Descent approach, results below.
+
 Step Distance Energy Force
 53 1.128305314261263 2.6123269811827434e-08 0.00983138333622291
